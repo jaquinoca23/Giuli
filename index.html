@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Giuli - Día de las Flores Amarillas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- AUDIO DE FONDO -->
+    <audio id="musica-fondo" loop>
+        <!-- Agrega aquí tu archivo de música: musica.mp3 -->
+        <source src="musica.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        <!-- ENCABEZADO -->
+        <header>
+            <div class="flor-principal">🌻</div>
+            <h1>Giuli, gracias por estar aquí</h1>
+            <p class="subtitulo">Construí este espacio porque hay cosas que me salen mejor desde el corazón y que quería
+                expresarte con calma</p>
+            <p class="bienvenida">💛 Tú sabes todo lo que he sentido y he sido capaz de hacer por ti desde el primer
+                día. 💛</p>
+            <div class="decoracion">✿ 🌼 ✿</div>
+        </header>
+
+        <!-- SECCIÓN: SOBRE ESTAS FLORES -->
+        <section class="seccion">
+            <h2>Detrás de cada detalle</h2>
+
+            <div style="display: flex; justify-content: center; margin: 40px 0 30px 0;">
+                <div class="imagen-detalle">
+                    <img src="flor.jpg" alt="Imagen especial para Giuli">
+                </div>
+            </div>
+
+            <p style="text-align: center; font-size: 1.1rem; line-height: 1.8; color: #555;">
+                Quizás no siempre supe cómo expresar todo lo que me pasaba por la cabeza, pero nunca me arrepentiré de
+                nada de lo que hice por ti, porque eres una mujer increíble.
+
+                Hubo cosas que jamás había hecho por nadie más; tú has sido la primera persona por la que me nació hacer
+                todo esto, y la única con la que quiero volver a hacerlo. Cada detalle fue mi manera en silencio de
+                demostrarte que siempre estuve aquí, valorándote y apostando por ti.
+            </p>
+        </section>
+
+        <!-- SECCIÓN: GALERÍA DE FOTOS -->
+        <section class="seccion">
+            <h2>Instantes especiales</h2>
+            <p style="text-align: center; color: #999; margin-bottom: 25px;">
+
+            </p>
+            <div class="galeria">
+                <div>
+                    <div class="foto-placeholder">
+                        <img src="GyJ.jpg" alt="Foto 1">
+                    </div>
+                    <p class="foto-label">La primera de muchas que soñaba tener juntos</p>
+                </div>
+                <div>
+                    <div class="foto-placeholder">
+                        <img src="GYJ2.jpg" alt="Foto 2">
+                    </div>
+                    <p class="foto-label">Eso lo hizo la Brianix xd jajaja</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: MENSAJES INTERACTIVOS -->
+        <section class="seccion">
+            <h2>Lo que Quiero Decirte</h2>
+            <p style="text-align: center; color: #999; margin-bottom: 25px;">
+                Haz clic en los botones para leer
+            </p>
+
+            <button class="mensaje-btn" onclick="mostrarMensaje(0)">
+                🫶 Lo que siento por ti
+            </button>
+            <div class="mensaje-emergente" id="mensaje-0">
+                <p>
+                    Giuli, eres alguien muy especial. Desde que te conozco, mi día es diferente cuando estás cerca.
+                    Hay algo en ti que me atrae genuinamente: tu forma de ser, tu energía, tu risa.
+                    No es algo que pueda explicar fácilmente, pero lo siento muy dentro, desde la primera vez que te ví
+                    supe que no serías una persona común en mi vida. Cada detalle que te he dado, cada palabra que te he
+                    escrito, ha sido con la intención de demostrarte lo mucho que significas para mí y lo importante que
+                    eres en mi vida.
+                </p>
+                <div class="firma">💛</div>
+            </div>
+
+            <button class="mensaje-btn" onclick="mostrarMensaje(1)">
+                🌟 Lo que admiro de ti
+            </button>
+            <div class="mensaje-emergente" id="mensaje-1">
+                <p>
+                    Desde que te conocí, siempre vi en ti a una mujer increíble, con una esencia única que me atrapó por
+                    completo. Me encanta tu forma de ser, tu madurez y la luz que transmites. Por eso mismo, cada
+                    detalle, cada carta y cada flor que te di nacieron del respeto y la gran admiración que siento por
+                    la persona que eres
+                </p>
+                <div class="firma">💫</div>
+            </div>
+
+            <button class="mensaje-btn" onclick="mostrarMensaje(2)">
+                💗 LO QUE SIEMPRE SENTÍ POR TI
+            </button>
+            <div class="mensaje-emergente" id="mensaje-2">
+                <p>
+                    A pesar de las dudas, los silencios o las idas y vueltas que tuvimos, mis sentimientos por ti jamás
+                    cambiaron. Siempre fuiste mi prioridad y la única persona con la que de verdad soñaba construir algo
+                    serio. Nunca busqué a nadie más con la intención de reemplazar lo que siento por ti, porque lo
+                    nuestro siempre tuvo un lugar único en mi corazón
+                </p>
+                <div class="firma">Y seguiré sintiéndolo 💕</div>
+            </div>
+
+        </section>
+
+        <!-- SECCIÓN: MENSAJE PRINCIPAL -->
+        <section class="seccion">
+            <div class="mensaje-disculpa">
+                <h3>💭 Lo que realmente quiero decirte</h3>
+                <p>
+                    Giuli, te pido perdón de todo corazón por haberte decepcionado y por no haber sabido manejar las
+                    cosas de
+                    la mejor manera. Me duele en el alma saber que te decepcioné, porque lo último que quería era
+                    hacerte daño o hacerte dudar de lo que siento por ti.
+
+                    No quiero aprender a querer a nadie más, ni repetir el proceso de conocer a otra persona. Te veo, te
+                    pienso y me doy cuenta de que a ti te esperaría todo el tiempo que sea necesario, porque sigo
+                    deseando con la misma ilusión que seas tú.
+
+                    Respeto lo que sientes y tus tiempos, pero te pido de corazón que no me cierres la puerta por
+                    completo. No te pido que todo cambie de la noche a la mañana, pero sí te pido una unica y última
+                    oportunidad
+                    para hacer las cosas bien, con madurez, transparencia, respesto y todo el cariño que te mereces.
+
+                    Te prometo que será la única y última oportunidad que te pida, porque estoy convencido de lo que
+                    siento y de que quiero demostrarte con hechos lo mucho que vales para mí. Tú vales totalmente la
+                    pena, y yo quiero ser alguien que te haga sentir especial, que te haga sonreír y que te acompañe en
+                    cada paso de tu vida.
+
+                </p>
+                <div class="firma">BY: Johnsote</div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CIERRE -->
+        <section class="seccion"
+            style="text-align: center; background: linear-gradient(135deg, #FFE4E1 0%, #FFF8DC 100%); border: 2px solid #D4AF37;">
+            <h2 style="margin-bottom: 20px;">Nuestra historia en tus manos</h2>
+            <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px; color: #333;">
+                Giuli, gracias por tomarte el tiempo de estar aquí, de leer esto y de escucharme. Que hayas llegado
+                hasta este punto ya significa muchísimo para mí. Espero de todo corazón que sientas la honestidad y el
+                respeto detrás de cada palabra.
+            </p>
+            <p style="font-size: 1.05rem; font-style: italic; color: #D4A017;">
+                "Si me das esa última oportunidad, te prometo que construiré la mejor versión de lo nuestro. Aquí voy a
+                estar, esperando por ti.."
+            </p>
+        </section>
+
+        <!-- SECCIÓN: CAMPO DE GIRASOLES (cierre visual antes del footer) -->
+        <section class="seccion" style="text-align: center;">
+            <h2>Tus flores amarillas, como siempre te prometí</h2>
+            <div style="display: flex; justify-content: center; margin: 40px 0 10px 0;">
+                <svg viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" class="campo-girasoles">
+                    <defs>
+                        <linearGradient id="gradPetalo1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFE44D;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFC300;stop-opacity:1" />
+                        </linearGradient>
+
+                        <radialGradient id="gradCentro" cx="35%" cy="35%" r="70%">
+                            <stop offset="0%" style="stop-color:#C97C1E;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#5C3A0E;stop-opacity:1" />
+                        </radialGradient>
+
+                        <linearGradient id="gradTallo" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3d7a2e;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2d5016;stop-opacity:1" />
+                        </linearGradient>
+
+                        <linearGradient id="gradHoja" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#5cab3a;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3d7a2e;stop-opacity:1" />
+                        </linearGradient>
+
+                        <filter id="sombra" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" />
+                        </filter>
+
+                        <!-- GIRASOL REUTILIZABLE: 16 pétalos + centro con textura, centrado en (0,0) -->
+                        <g id="girasol">
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(0)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(22.5)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(45)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(67.5)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(90)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(112.5)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(135)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(157.5)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(180)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(202.5)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(225)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(247.5)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(270)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(292.5)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(315)" />
+                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(337.5)" />
+                            <circle class="centro-flor" cx="0" cy="0" r="16" filter="url(#sombra)" />
+                            <circle class="textura-centro" cx="0" cy="0" r="5" />
+                            <circle class="textura-centro" cx="0" cy="0" r="9" />
+                            <circle class="textura-centro" cx="0" cy="0" r="13" />
+                        </g>
+
+                        <!-- HOJA REUTILIZABLE: forma de gota apuntando hacia +x, base en (0,0) -->
+                        <path id="hoja" d="M0,0 C 10,-13 26,-13 36,0 C 26,13 10,13 0,0 Z" />
+                    </defs>
+
+                    <!-- 20 TALLOS -->
+                    <path class="tallo-principal" d="M 79.2 500 Q 70.7 325.4 84.5 150.8" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 91.0 500 Q 107.7 326.7 98.1 153.4" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 165.9 500 Q 162.7 327.3 171.8 154.5" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 332.7 500 Q 347.8 348.4 334.4 196.7" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 367.0 500 Q 371.9 348.3 373.7 196.6" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 507.8 500 Q 520.8 331.3 507.0 162.6" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 538.8 500 Q 546.8 332.7 533.7 165.4" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 638.3 500 Q 638.8 339.3 641.9 178.6" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 75.0 500 Q 91.0 310.2 77.2 120.5" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 87.6 500 Q 67.7 329.6 80.3 159.2" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 212.5 500 Q 208.1 331.0 217.7 162.1" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 303.5 500 Q 307.2 324.4 307.8 148.9" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 323.0 500 Q 313.0 304.3 321.6 108.7" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 422.6 500 Q 427.6 320.9 430.5 141.9" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 453.0 500 Q 457.4 323.8 455.1 147.6" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 553.1 500 Q 552.7 317.3 545.8 134.7" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 582.4 500 Q 586.4 317.4 582.1 134.8" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 676.0 500 Q 657.1 324.2 673.2 148.3" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 697.4 500 Q 701.1 326.8 691.0 153.5" stroke-linecap="round" />
+                    <path class="tallo-principal" d="M 788.6 500 Q 793.3 321.4 782.6 142.8" stroke-linecap="round" />
+
+                    <!-- HOJAS (2 por tallo) -->
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(76.2,377.8) rotate(140) scale(0.78)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(73.7,273.0) rotate(-40) scale(0.69)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(96.9,378.7) rotate(-140) scale(0.78)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(101.9,274.7) rotate(40) scale(0.69)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(164.8,379.1) rotate(140) scale(0.76)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(163.8,275.4) rotate(-40) scale(0.68)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(337.9,393.8) rotate(-140) scale(0.79)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(342.5,302.9) rotate(40) scale(0.71)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(368.7,393.8) rotate(140) scale(0.75)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(370.2,302.8) rotate(-40) scale(0.66)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(512.3,381.9) rotate(-140) scale(0.76)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(516.2,280.7) rotate(40) scale(0.67)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(541.6,382.9) rotate(140) scale(0.82)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(544.0,282.5) rotate(-40) scale(0.73)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(638.5,387.5) rotate(-140) scale(0.80)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(638.7,291.1) rotate(40) scale(0.71)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(80.6,367.2) rotate(140) scale(1.00)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(85.4,253.3) rotate(-40) scale(0.89)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(80.6,380.7) rotate(-140) scale(1.03)" />
+                    <use href="#hoja" class="hoja-principal" transform="translate(74.7,278.5) rotate(40) scale(0.92)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(211.0,381.7) rotate(140) scale(0.92)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(209.6,280.3) rotate(-40) scale(0.82)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(304.8,377.1) rotate(-140) scale(0.93)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(305.9,271.8) rotate(40) scale(0.82)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(319.5,363.0) rotate(140) scale(1.02)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(316.5,245.7) rotate(-40) scale(0.91)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(424.3,374.7) rotate(-140) scale(1.06)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(425.8,267.2) rotate(40) scale(0.94)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(454.5,376.7) rotate(140) scale(1.01)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(455.9,271.0) rotate(-40) scale(0.90)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(552.9,372.1) rotate(-140) scale(1.05)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(552.8,262.5) rotate(40) scale(0.93)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(583.8,372.2) rotate(140) scale(1.02)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(585.0,262.6) rotate(-40) scale(0.91)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(669.4,376.9) rotate(-140) scale(1.02)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(663.7,271.4) rotate(40) scale(0.90)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(698.7,378.7) rotate(140) scale(0.95)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(699.8,274.8) rotate(-40) scale(0.85)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(790.3,375.0) rotate(-140) scale(0.90)" />
+                    <use href="#hoja" class="hoja-principal"
+                        transform="translate(791.7,267.8) rotate(40) scale(0.80)" />
+
+                    <!-- 20 GIRASOLES: 8 atrás (mas chicos/opacos) + 12 adelante (mas grandes) -->
+                    <use href="#girasol" class="girasol-anim" transform="translate(84.5,141.9) rotate(-8.6) scale(0.64)"
+                        opacity="0.85" />
+                    <use href="#girasol" class="girasol-anim" transform="translate(98.1,144.5) rotate(6.5) scale(0.63)"
+                        opacity="0.85" />
+                    <use href="#girasol" class="girasol-anim" transform="translate(171.8,146.2) rotate(2.5) scale(0.59)"
+                        opacity="0.85" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(334.4,187.4) rotate(-2.1) scale(0.67)" opacity="0.85" />
+                    <use href="#girasol" class="girasol-anim" transform="translate(373.7,188.8) rotate(7.2) scale(0.56)"
+                        opacity="0.85" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(507.0,154.5) rotate(-7.6) scale(0.58)" opacity="0.85" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(533.7,155.4) rotate(-6.4) scale(0.71)" opacity="0.85" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(641.9,169.1) rotate(-2.6) scale(0.68)" opacity="0.85" />
+
+                    <use href="#girasol" class="girasol-anim" transform="translate(77.2,104.6) rotate(0.4) scale(1.13)"
+                        opacity="1" />
+                    <use href="#girasol" class="girasol-anim" transform="translate(80.3,142.5) rotate(-3.4) scale(1.19)"
+                        opacity="1" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(217.7,148.8) rotate(-1.3) scale(0.95)" opacity="1" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(307.8,135.4) rotate(-0.2) scale(0.96)" opacity="1" />
+                    <use href="#girasol" class="girasol-anim" transform="translate(321.6,92.4) rotate(4.2) scale(1.17)"
+                        opacity="1" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(430.5,124.4) rotate(-3.0) scale(1.25)" opacity="1" />
+                    <use href="#girasol" class="girasol-anim" transform="translate(455.1,131.7) rotate(1.3) scale(1.14)"
+                        opacity="1" />
+                    <use href="#girasol" class="girasol-anim" transform="translate(545.8,117.4) rotate(7.1) scale(1.24)"
+                        opacity="1" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(582.1,118.4) rotate(-7.0) scale(1.17)" opacity="1" />
+                    <use href="#girasol" class="girasol-anim" transform="translate(673.2,132.1) rotate(7.9) scale(1.16)"
+                        opacity="1" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(691.0,139.3) rotate(-1.8) scale(1.01)" opacity="1" />
+                    <use href="#girasol" class="girasol-anim"
+                        transform="translate(782.6,130.1) rotate(-0.6) scale(0.91)" opacity="1" />
+                </svg>
+            </div>
+            <p style="font-size: 1rem; color: #999; font-style: italic;">
+                🌻
+            </p>
+        </section>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <p>✿ Perdóname y déjame demostrarte lo que vales para mí ✿</p>
+            <p>Tú sabes todo lo que he dado por ti y lo mucho que me he esforzado siempre por sacarte una sonrisa. Sé
+                que me equivoqué, pero estas flores son mi forma sincera de pedirte perdón y pedirte que volvamos a
+                salir, esta vez de verdad y con la intención clara de construir algo serio a tu lado.
+
+                No me da vergüenza ni me hace menos hombre pedirle una oportunidad a la mujer que realmente vale la
+                pena. No me importa lo que opinen los demás o si la Brianix me molesta con eso, porque yo sé la persona
+                e increíble mujer que eres.
+
+                Te quiero a ti, y estoy dispuesto a mejorar cada día para demostrarte que las cosas van a ser
+                diferentes. Créeme que esto que siento jamás lo había sentido por nadie. Desde esa vez que conversamos
+                sobre las cosas que te incomodaban, he cambiado y dejado de hacer todo lo que te molestaba, porque
+                entendí qué estaba bien y qué no. Porque una gran mujer como tú merece a un buen hombre a su lado, y yo
+                quiero ser esa persona para ti. </p>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #AAA;">
+                Página creada con sinceridad en el Día de las Flores Amarillas | Para Giuli 💛 | DE: J.A.A.C
+            </p>
+        </footer>
+    </div>
+
+    <!-- CONTROLES DE MÚSICA -->
+    <div class="controles-musica">
+        <button class="boton-musica" id="boton-play" onclick="toggleMusica()">
+            🔇
+        </button>
+        <span class="etiqueta-musica">Música</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
