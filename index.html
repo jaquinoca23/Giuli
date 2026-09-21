@@ -5,17 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Giuli</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%8C%BB</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%8C%BB</text></svg>">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <!-- AUDIO DE FONDO -->
-    <audio id="musica-fondo" loop>
-        <!-- Agrega aquí tu archivo de música: musica.mp3 -->
+<body class="entrada-activa">
+    <!-- AUDIO DE FONDO (se inicia al tocar la pantalla de entrada) -->
+    <audio id="musica-fondo" loop preload="auto">
+        <!-- Archivo de música: musica.mp3 (misma carpeta que este archivo) -->
         <source src="musica.mp3" type="audio/mpeg">
         Tu navegador no soporta audio.
     </audio>
+
+    <!-- PANTALLA DE ENTRADA: el toque de la persona permite iniciar la música -->
+    <div id="pantalla-entrada">
+        <div class="entrada-flor">🌻</div>
+        <h2>Giuli, esto es para ti</h2>
+        <button class="entrada-btn" type="button">Toca para abrir 💛</button>
+    </div>
 
     <!-- CONTENEDOR PRINCIPAL -->
     <div class="container">
@@ -125,10 +133,9 @@
         <!-- SECCIÓN: MENSAJE PRINCIPAL -->
         <section class="seccion">
             <div class="mensaje-disculpa">
-                <h3>💭 Lo que realmente quiero decirte</h3>
+                <h3>🫶 Lo que realmente quiero decirte</h3>
                 <p>
-                    Giuli, te pido perdón de todo corazón por haberte decepcionado y por no haber sabido manejar las
-                    cosas de
+                    Giuli, te pido perdón de todo corazón por haberte fallado y por no haber sabido manejar las cosas de
                     la mejor manera. Me duele en el alma saber que te decepcioné, porque lo último que quería era
                     hacerte daño o hacerte dudar de lo que siento por ti.
 
@@ -136,249 +143,14 @@
                     pienso y me doy cuenta de que a ti te esperaría todo el tiempo que sea necesario, porque sigo
                     deseando con la misma ilusión que seas tú.
 
-                    Respeto lo que sientes y tus tiempos, pero te pido de corazón que no me cierres la puerta por
-                    completo. No te pido que todo cambie de la noche a la mañana, pero sí te pido una unica y última
-                    oportunidad
-                    para hacer las cosas bien, con madurez, transparencia, respesto y todo el cariño que te mereces.
-
-                    Te prometo que será la única y última oportunidad que te pida, porque estoy convencido de lo que
-                    siento y de que quiero demostrarte con hechos lo mucho que vales para mí. Tú vales totalmente la
-                    pena, y yo quiero ser alguien que te haga sentir especial, que te haga sonreír y que te acompañe en
-                    cada paso de tu vida.
-
                 </p>
                 <div class="firma">BY: Johnsote</div>
             </div>
         </section>
 
-        <!-- SECCIÓN: CIERRE -->
-        <section class="seccion"
-            style="text-align: center; background: linear-gradient(135deg, #FFE4E1 0%, #FFF8DC 100%); border: 2px solid #D4AF37;">
-            <h2 style="margin-bottom: 20px;">Nuestra historia en tus manos</h2>
-            <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px; color: #333;">
-                Giuli, gracias por tomarte el tiempo de estar aquí, de leer esto y de escucharme. Que hayas llegado
-                hasta este punto ya significa muchísimo para mí. Espero de todo corazón que sientas la honestidad y el
-                respeto detrás de cada palabra.
-            </p>
-            <p style="font-size: 1.05rem; font-style: italic; color: #D4A017;">
-                "Si me das esa última oportunidad, te prometo que construiré la mejor versión de lo nuestro. Aquí voy a
-                estar, esperando por ti.."
-            </p>
-        </section>
 
-        <!-- SECCIÓN: CAMPO DE GIRASOLES (cierre visual antes del footer) -->
-        <section class="seccion" style="text-align: center;">
-            <h2>Tus flores amarillas, como siempre te prometí</h2>
-            <div style="display: flex; justify-content: center; margin: 40px 0 10px 0;">
-                <svg viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" class="campo-girasoles">
-                    <defs>
-                        <linearGradient id="gradPetalo1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#FFE44D;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#FFC300;stop-opacity:1" />
-                        </linearGradient>
-
-                        <radialGradient id="gradCentro" cx="35%" cy="35%" r="70%">
-                            <stop offset="0%" style="stop-color:#C97C1E;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#5C3A0E;stop-opacity:1" />
-                        </radialGradient>
-
-                        <linearGradient id="gradTallo" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#3d7a2e;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#2d5016;stop-opacity:1" />
-                        </linearGradient>
-
-                        <linearGradient id="gradHoja" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#5cab3a;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#3d7a2e;stop-opacity:1" />
-                        </linearGradient>
-
-                        <filter id="sombra" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" />
-                        </filter>
-
-                        <!-- GIRASOL REUTILIZABLE: 16 pétalos + centro con textura, centrado en (0,0) -->
-                        <g id="girasol">
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(0)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(22.5)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(45)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(67.5)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(90)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(112.5)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(135)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(157.5)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(180)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(202.5)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(225)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(247.5)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(270)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(292.5)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(315)" />
-                            <ellipse class="petalo-grande" cx="0" cy="-30" rx="8" ry="22" transform="rotate(337.5)" />
-                            <circle class="centro-flor" cx="0" cy="0" r="16" filter="url(#sombra)" />
-                            <circle class="textura-centro" cx="0" cy="0" r="5" />
-                            <circle class="textura-centro" cx="0" cy="0" r="9" />
-                            <circle class="textura-centro" cx="0" cy="0" r="13" />
-                        </g>
-
-                        <!-- HOJA REUTILIZABLE: forma de gota apuntando hacia +x, base en (0,0) -->
-                        <path id="hoja" d="M0,0 C 10,-13 26,-13 36,0 C 26,13 10,13 0,0 Z" />
-                    </defs>
-
-                    <!-- 20 TALLOS -->
-                    <path class="tallo-principal" d="M 79.2 500 Q 70.7 325.4 84.5 150.8" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 91.0 500 Q 107.7 326.7 98.1 153.4" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 165.9 500 Q 162.7 327.3 171.8 154.5" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 332.7 500 Q 347.8 348.4 334.4 196.7" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 367.0 500 Q 371.9 348.3 373.7 196.6" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 507.8 500 Q 520.8 331.3 507.0 162.6" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 538.8 500 Q 546.8 332.7 533.7 165.4" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 638.3 500 Q 638.8 339.3 641.9 178.6" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 75.0 500 Q 91.0 310.2 77.2 120.5" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 87.6 500 Q 67.7 329.6 80.3 159.2" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 212.5 500 Q 208.1 331.0 217.7 162.1" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 303.5 500 Q 307.2 324.4 307.8 148.9" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 323.0 500 Q 313.0 304.3 321.6 108.7" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 422.6 500 Q 427.6 320.9 430.5 141.9" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 453.0 500 Q 457.4 323.8 455.1 147.6" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 553.1 500 Q 552.7 317.3 545.8 134.7" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 582.4 500 Q 586.4 317.4 582.1 134.8" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 676.0 500 Q 657.1 324.2 673.2 148.3" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 697.4 500 Q 701.1 326.8 691.0 153.5" stroke-linecap="round" />
-                    <path class="tallo-principal" d="M 788.6 500 Q 793.3 321.4 782.6 142.8" stroke-linecap="round" />
-
-                    <!-- HOJAS (2 por tallo) -->
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(76.2,377.8) rotate(140) scale(0.78)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(73.7,273.0) rotate(-40) scale(0.69)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(96.9,378.7) rotate(-140) scale(0.78)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(101.9,274.7) rotate(40) scale(0.69)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(164.8,379.1) rotate(140) scale(0.76)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(163.8,275.4) rotate(-40) scale(0.68)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(337.9,393.8) rotate(-140) scale(0.79)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(342.5,302.9) rotate(40) scale(0.71)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(368.7,393.8) rotate(140) scale(0.75)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(370.2,302.8) rotate(-40) scale(0.66)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(512.3,381.9) rotate(-140) scale(0.76)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(516.2,280.7) rotate(40) scale(0.67)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(541.6,382.9) rotate(140) scale(0.82)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(544.0,282.5) rotate(-40) scale(0.73)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(638.5,387.5) rotate(-140) scale(0.80)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(638.7,291.1) rotate(40) scale(0.71)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(80.6,367.2) rotate(140) scale(1.00)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(85.4,253.3) rotate(-40) scale(0.89)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(80.6,380.7) rotate(-140) scale(1.03)" />
-                    <use href="#hoja" class="hoja-principal" transform="translate(74.7,278.5) rotate(40) scale(0.92)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(211.0,381.7) rotate(140) scale(0.92)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(209.6,280.3) rotate(-40) scale(0.82)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(304.8,377.1) rotate(-140) scale(0.93)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(305.9,271.8) rotate(40) scale(0.82)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(319.5,363.0) rotate(140) scale(1.02)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(316.5,245.7) rotate(-40) scale(0.91)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(424.3,374.7) rotate(-140) scale(1.06)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(425.8,267.2) rotate(40) scale(0.94)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(454.5,376.7) rotate(140) scale(1.01)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(455.9,271.0) rotate(-40) scale(0.90)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(552.9,372.1) rotate(-140) scale(1.05)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(552.8,262.5) rotate(40) scale(0.93)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(583.8,372.2) rotate(140) scale(1.02)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(585.0,262.6) rotate(-40) scale(0.91)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(669.4,376.9) rotate(-140) scale(1.02)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(663.7,271.4) rotate(40) scale(0.90)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(698.7,378.7) rotate(140) scale(0.95)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(699.8,274.8) rotate(-40) scale(0.85)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(790.3,375.0) rotate(-140) scale(0.90)" />
-                    <use href="#hoja" class="hoja-principal"
-                        transform="translate(791.7,267.8) rotate(40) scale(0.80)" />
-
-                    <!-- 20 GIRASOLES: 8 atrás (mas chicos/opacos) + 12 adelante (mas grandes) -->
-                    <use href="#girasol" class="girasol-anim" transform="translate(84.5,141.9) rotate(-8.6) scale(0.64)"
-                        opacity="0.85" />
-                    <use href="#girasol" class="girasol-anim" transform="translate(98.1,144.5) rotate(6.5) scale(0.63)"
-                        opacity="0.85" />
-                    <use href="#girasol" class="girasol-anim" transform="translate(171.8,146.2) rotate(2.5) scale(0.59)"
-                        opacity="0.85" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(334.4,187.4) rotate(-2.1) scale(0.67)" opacity="0.85" />
-                    <use href="#girasol" class="girasol-anim" transform="translate(373.7,188.8) rotate(7.2) scale(0.56)"
-                        opacity="0.85" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(507.0,154.5) rotate(-7.6) scale(0.58)" opacity="0.85" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(533.7,155.4) rotate(-6.4) scale(0.71)" opacity="0.85" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(641.9,169.1) rotate(-2.6) scale(0.68)" opacity="0.85" />
-
-                    <use href="#girasol" class="girasol-anim" transform="translate(77.2,104.6) rotate(0.4) scale(1.13)"
-                        opacity="1" />
-                    <use href="#girasol" class="girasol-anim" transform="translate(80.3,142.5) rotate(-3.4) scale(1.19)"
-                        opacity="1" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(217.7,148.8) rotate(-1.3) scale(0.95)" opacity="1" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(307.8,135.4) rotate(-0.2) scale(0.96)" opacity="1" />
-                    <use href="#girasol" class="girasol-anim" transform="translate(321.6,92.4) rotate(4.2) scale(1.17)"
-                        opacity="1" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(430.5,124.4) rotate(-3.0) scale(1.25)" opacity="1" />
-                    <use href="#girasol" class="girasol-anim" transform="translate(455.1,131.7) rotate(1.3) scale(1.14)"
-                        opacity="1" />
-                    <use href="#girasol" class="girasol-anim" transform="translate(545.8,117.4) rotate(7.1) scale(1.24)"
-                        opacity="1" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(582.1,118.4) rotate(-7.0) scale(1.17)" opacity="1" />
-                    <use href="#girasol" class="girasol-anim" transform="translate(673.2,132.1) rotate(7.9) scale(1.16)"
-                        opacity="1" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(691.0,139.3) rotate(-1.8) scale(1.01)" opacity="1" />
-                    <use href="#girasol" class="girasol-anim"
-                        transform="translate(782.6,130.1) rotate(-0.6) scale(0.91)" opacity="1" />
-                </svg>
-            </div>
-            <p style="font-size: 1rem; color: #999; font-style: italic;">
-                🌻
-            </p>
-        </section>
-
-        <!-- PIE DE PÁGINA -->
         <footer>
-            <p>✿ Perdóname y déjame demostrarte lo que vales para mí ✿</p>
+            <p>✿ Déjame demostrarte lo que vales para mí ✿</p>
             <p>Tú sabes todo lo que he dado por ti y lo mucho que me he esforzado siempre por sacarte una sonrisa. Sé
                 que me equivoqué, pero estas flores son mi forma sincera de pedirte perdón y pedirte que volvamos a
                 salir, esta vez de verdad y con la intención clara de construir algo serio a tu lado.
@@ -392,18 +164,289 @@
                 sobre las cosas que te incomodaban, he cambiado y dejado de hacer todo lo que te molestaba, porque
                 entendí qué estaba bien y qué no. Porque una gran mujer como tú merece a un buen hombre a su lado, y yo
                 quiero ser esa persona para ti. </p>
-            <p style="margin-top: 20px; font-size: 0.85rem; color: #AAA;">
-                Página creada con sinceridad en el Día de las Flores Amarillas | Para Giuli 💛 | DE: J.A.A.C
-            </p>
-        </footer>
-    </div>
+            <div class="firma">BY: Johnsote</div>
 
-    <!-- CONTROLES DE MÚSICA -->
-    <div class="controles-musica">
-        <button class="boton-musica" id="boton-play" onclick="toggleMusica()">
-            🔇
-        </button>
-        <span class="etiqueta-musica">Música</span>
+        </footer>
+
+        <!-- SECCIÓN: CIERRE -->
+        <!--<section class="seccion"
+            style="text-align: center; background: linear-gradient(135deg, #FFE4E1 0%, #FFF8DC 100%); border: 2px solid #D4AF37;">
+            <h2 style="margin-bottom: 20px;">Nuestra historia en tus manos</h2>
+            <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px; color: #333;">
+                Giuli, gracias por tomarte el tiempo de estar aquí, de leer esto y de escucharme. Que hayas llegado
+                hasta este punto ya significa muchísimo para mí. Espero de todo corazón que sientas la honestidad y el
+                respeto detrás de cada palabra.
+            </p>
+            <p style="font-size: 1.05rem; font-style: italic; color: #D4A017;">
+                "Si me das esa última oportunidad, te prometo que construiré la mejor versión de lo nuestro. Aquí voy a
+                estar, esperando por ti.."
+            </p>
+        </section> -->
+
+        <!-- SECCIÓN: RAMO DE GIRASOLES (cierre visual antes del footer) -->
+<section class="seccion" style="text-align: center;">
+    <h2>Tus flores amarillas, como siempre te prometí</h2>
+    <div style="display: flex; justify-content: center; margin: 40px 0 10px 0;">
+<svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg" class="ramo-girasoles" role="img" aria-label="Ramo de girasoles">
+  <defs>
+    <linearGradient id="rp-fondo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b6b5c"/>
+      <stop offset="100%" stop-color="#2f8f92"/>
+    </linearGradient>
+    <linearGradient id="rp-petBack" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#f08c00"/>
+      <stop offset="100%" stop-color="#ffc21a"/>
+    </linearGradient>
+    <linearGradient id="rp-petMid" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#f5a300"/>
+      <stop offset="100%" stop-color="#ffd83a"/>
+    </linearGradient>
+    <linearGradient id="rp-petFront" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffb800"/>
+      <stop offset="100%" stop-color="#ffe45c"/>
+    </linearGradient>
+    <radialGradient id="rp-centro" cx="40%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#4a2a0e"/>
+      <stop offset="100%" stop-color="#1e0f05"/>
+    </radialGradient>
+    <linearGradient id="rp-hoja" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5fae3d"/>
+      <stop offset="100%" stop-color="#2f7a2a"/>
+    </linearGradient>
+    <linearGradient id="rp-papel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd1da" stop-opacity="0.62"/>
+      <stop offset="100%" stop-color="#ff8fa3" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="rp-papelAtras" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7c4cf" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e79aab" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="rp-cinta" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffc98a"/>
+      <stop offset="100%" stop-color="#e79d55"/>
+    </linearGradient>
+    <pattern id="rp-rombos" width="34" height="34" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="17" height="17" fill="#ffffff" opacity="0.35"/>
+      <rect x="17" y="17" width="17" height="17" fill="#ffffff" opacity="0.35"/>
+    </pattern>
+    <filter id="rp-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    
+<g id="rp-girasol">
+  <circle r="44" fill="#000" opacity="0.18" filter="url(#rp-blur)"/>
+  <path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(0.0)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(13.8)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(27.7)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(41.5)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(55.4)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(69.2)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(83.1)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(96.9)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(110.8)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(124.6)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(138.5)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(152.3)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(166.2)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(180.0)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(193.8)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(207.7)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(221.5)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(235.4)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(249.2)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(263.1)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(276.9)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(290.8)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(304.6)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(318.5)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(332.3)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 12,-49.4 10.8,-86.8 0,-104 C -10.8,-86.8 -12,-49.4 0,-26 Z" transform="rotate(346.2)" fill="url(#rp-petBack)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+  <path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(6.9)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(20.8)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(34.6)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(48.5)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(62.3)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(76.2)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(90.0)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(103.8)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(117.7)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(131.5)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(145.4)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(159.2)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(173.1)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(186.9)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(200.8)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(214.6)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(228.5)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(242.3)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(256.2)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(270.0)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(283.8)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(297.7)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(311.5)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(325.4)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(339.2)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+<path d="M0,-26 C 11,-47.0 9.9,-80.6 0,-96 C -9.9,-80.6 -11,-47.0 0,-26 Z" transform="rotate(353.1)" fill="url(#rp-petMid)" stroke="#c97a00" stroke-opacity="0.35" stroke-width="0.6"/>
+  <path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(4.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(22.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(40.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(58.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(76.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(94.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(112.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(130.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(148.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(166.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(184.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(202.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(220.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(238.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(256.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(274.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(292.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(310.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(328.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+<path d="M0,-26 C 10,-42.2 9.0,-68.1 0,-80 C -9.0,-68.1 -10,-42.2 0,-26 Z" transform="rotate(346.0)" fill="url(#rp-petFront)" stroke="#c97a00" stroke-opacity="0.25" stroke-width="0.6"/>
+  <circle r="42" fill="#7a4a12"/>
+  <circle r="39" fill="url(#rp-centro)"/>
+  <g fill="#b98336" opacity="0.55"><circle cx="2.3" cy="0.0" r="1.5"/><circle cx="-2.9" cy="2.7" r="1.5"/><circle cx="0.4" cy="-5.1" r="1.5"/><circle cx="3.7" cy="4.8" r="1.5"/><circle cx="-6.8" cy="-1.2" r="1.5"/><circle cx="6.4" cy="-4.1" r="1.5"/><circle cx="-2.1" cy="8.0" r="1.5"/><circle cx="-4.1" cy="-7.9" r="1.5"/><circle cx="8.9" cy="3.2" r="1.5"/><circle cx="-9.2" cy="3.8" r="1.5"/><circle cx="4.5" cy="-9.5" r="1.5"/><circle cx="3.3" cy="10.5" r="1.5"/><circle cx="-9.9" cy="-5.7" r="1.5"/><circle cx="11.6" cy="-2.6" r="1.5"/><circle cx="-7.1" cy="10.1" r="1.5"/><circle cx="-1.6" cy="-12.7" r="1.5"/><circle cx="10.1" cy="8.5" r="1.5"/><circle cx="-13.5" cy="0.6" r="1.5"/><circle cx="9.9" cy="-9.8" r="1.5"/><circle cx="-0.7" cy="14.3" r="1.5"/><circle cx="-9.4" cy="-11.3" r="1.5"/><circle cx="14.9" cy="2.0" r="1.5"/><circle cx="-12.6" cy="8.8" r="1.5"/><circle cx="3.5" cy="-15.3" r="1.5"/><circle cx="8.0" cy="13.9" r="1.5"/><circle cx="-15.6" cy="-5.0" r="1.5"/><circle cx="15.2" cy="-7.0" r="1.5"/><circle cx="-6.6" cy="15.7" r="1.5"/><circle cx="-5.9" cy="-16.3" r="1.5"/><circle cx="15.6" cy="8.2" r="1.5"/><circle cx="-17.3" cy="4.6" r="1.5"/><circle cx="9.8" cy="-15.3" r="1.5"/><circle cx="3.1" cy="18.2" r="1.5"/><circle cx="-14.8" cy="-11.5" r="1.5"/><circle cx="19.0" cy="-1.6" r="1.5"/><circle cx="-13.1" cy="14.2" r="1.5"/><circle cx="0.1" cy="-19.6" r="1.5"/><circle cx="13.3" cy="14.7" r="1.5"/><circle cx="-20.0" cy="-1.9" r="1.5"/><circle cx="16.2" cy="-12.3" r="1.5"/><circle cx="-3.7" cy="20.3" r="1.5"/><circle cx="-11.1" cy="-17.7" r="1.5"/><circle cx="20.4" cy="5.6" r="1.5"/><circle cx="-19.0" cy="9.8" r="1.5"/><circle cx="7.5" cy="-20.3" r="1.5"/><circle cx="8.2" cy="20.3" r="1.5"/><circle cx="-20.0" cy="-9.5" r="1.5"/><circle cx="21.4" cy="-6.6" r="1.5"/><circle cx="-11.4" cy="19.5" r="1.5"/><circle cx="-4.8" cy="-22.3" r="1.5"/><circle cx="18.8" cy="13.3" r="1.5"/><circle cx="-23.1" cy="2.9" r="1.5"/><circle cx="15.2" cy="-17.9" r="1.5"/><circle cx="0.9" cy="23.7" r="1.5"/><circle cx="-16.8" cy="-17.0" r="1.5"/><circle cx="24.1" cy="1.2" r="1.5"/><circle cx="-18.8" cy="15.5" r="1.5"/><circle cx="3.4" cy="-24.3" r="1.5"/><circle cx="14.1" cy="20.4" r="1.5"/><circle cx="-24.4" cy="-5.6" r="1.5"/><circle cx="21.9" cy="-12.4" r="1.5"/><circle cx="-7.9" cy="24.2" r="1.5"/><circle cx="-10.6" cy="-23.3" r="1.5"/><circle cx="23.8" cy="10.1" r="1.5"/><circle cx="-24.5" cy="8.7" r="1.5"/><circle cx="12.3" cy="-23.2" r="1.5"/><circle cx="6.6" cy="25.6" r="1.5"/><circle cx="-22.3" cy="-14.5" r="1.5"/><circle cx="26.5" cy="-4.4" r="1.5"/><circle cx="-16.7" cy="21.3" r="1.5"/><circle cx="-2.1" cy="-27.1" r="1.5"/><circle cx="20.0" cy="18.7" r="1.5"/><circle cx="-27.6" cy="-0.3" r="1.5"/><circle cx="20.7" cy="-18.6" r="1.5"/><circle cx="-2.7" cy="27.8" r="1.5"/><circle cx="-16.9" cy="-22.5" r="1.5"/><circle cx="27.9" cy="5.2" r="1.5"/><circle cx="-24.2" cy="15.1" r="1.5"/><circle cx="7.7" cy="-27.7" r="1.5"/><circle cx="13.1" cy="25.8" r="1.5"/><circle cx="-27.2" cy="-10.3" r="1.5"/><circle cx="27.2" cy="-10.9" r="1.5"/><circle cx="-12.7" cy="26.5" r="1.5"/><circle cx="-8.6" cy="-28.4" r="1.5"/><circle cx="25.6" cy="15.2" r="1.5"/><circle cx="-29.3" cy="6.1" r="1.5"/><circle cx="17.6" cy="-24.5" r="1.5"/><circle cx="3.6" cy="30.1" r="1.5"/><circle cx="-23.1" cy="-19.9" r="1.5"/><circle cx="30.7" cy="-1.0" r="1.5"/><circle cx="-22.1" cy="21.5" r="1.5"/><circle cx="1.7" cy="-31.0" r="1.5"/><circle cx="19.7" cy="24.1" r="1.5"/><circle cx="-31.0" cy="-4.5" r="1.5"/><circle cx="26.0" cy="-17.7" r="1.5"/><circle cx="-7.3" cy="30.8" r="1.5"/><circle cx="-15.6" cy="-27.8" r="1.5"/><circle cx="30.4" cy="10.0" r="1.5"/><circle cx="-29.3" cy="13.2" r="1.5"/><circle cx="12.8" cy="-29.7" r="1.5"/><circle cx="10.7" cy="30.7" r="1.5"/><circle cx="-28.8" cy="-15.5" r="1.5"/><circle cx="31.8" cy="-8.0" r="1.5"/><circle cx="-18.1" cy="27.6" r="1.5"/><circle cx="-5.3" cy="-32.7" r="1.5"/><circle cx="26.1" cy="20.7" r="1.5"/><circle cx="-33.4" cy="2.4" r="1.5"/><circle cx="23.1" cy="-24.4" r="1.5"/><circle cx="-0.5" cy="33.8" r="1.5"/><circle cx="-22.5" cy="-25.4" r="1.5"/></g>
+  <circle r="39" fill="none" stroke="#f0b04a" stroke-opacity="0.25" stroke-width="1.2"/>
+</g>
+  </defs>
+
+  <!-- FONDO -->
+  <rect width="800" height="900" rx="28" fill="url(#rp-fondo)"/>
+  <g fill="#ffffff"><circle cx="363" cy="499" r="2.0" class="rp-estrella" style="animation-delay:1.9s"/>
+<circle cx="406" cy="523" r="1.0" class="rp-estrella" style="animation-delay:2.0s"/>
+<circle cx="500" cy="701" r="0.9" class="rp-estrella" style="animation-delay:1.2s"/>
+<circle cx="85" cy="715" r="1.7" class="rp-estrella" style="animation-delay:0.2s"/>
+<circle cx="771" cy="850" r="1.7" class="rp-estrella" style="animation-delay:2.5s"/>
+<circle cx="136" cy="28" r="1.5" class="rp-estrella" style="animation-delay:0.2s"/>
+<circle cx="161" cy="224" r="0.8" class="rp-estrella" style="animation-delay:1.9s"/>
+<circle cx="354" cy="744" r="1.5" class="rp-estrella" style="animation-delay:2.6s"/>
+<circle cx="400" cy="588" r="1.4" class="rp-estrella" style="animation-delay:1.1s"/>
+<circle cx="783" cy="876" r="1.9" class="rp-estrella" style="animation-delay:2.8s"/>
+<circle cx="258" cy="214" r="1.2" class="rp-estrella" style="animation-delay:0.3s"/>
+<circle cx="605" cy="361" r="1.9" class="rp-estrella" style="animation-delay:1.5s"/>
+<circle cx="753" cy="748" r="0.8" class="rp-estrella" style="animation-delay:0.8s"/>
+<circle cx="716" cy="422" r="2.1" class="rp-estrella" style="animation-delay:1.6s"/>
+<circle cx="71" cy="559" r="1.8" class="rp-estrella" style="animation-delay:1.1s"/>
+<circle cx="82" cy="303" r="2.1" class="rp-estrella" style="animation-delay:3.0s"/>
+<circle cx="106" cy="228" r="0.9" class="rp-estrella" style="animation-delay:0.2s"/>
+<circle cx="629" cy="169" r="1.5" class="rp-estrella" style="animation-delay:1.8s"/>
+<circle cx="162" cy="648" r="1.0" class="rp-estrella" style="animation-delay:2.6s"/>
+<circle cx="105" cy="379" r="1.1" class="rp-estrella" style="animation-delay:1.1s"/>
+<circle cx="763" cy="710" r="1.2" class="rp-estrella" style="animation-delay:3.5s"/>
+<circle cx="177" cy="356" r="1.9" class="rp-estrella" style="animation-delay:2.6s"/>
+<circle cx="92" cy="871" r="1.1" class="rp-estrella" style="animation-delay:1.0s"/>
+<circle cx="610" cy="300" r="1.2" class="rp-estrella" style="animation-delay:0.3s"/>
+<circle cx="84" cy="519" r="1.1" class="rp-estrella" style="animation-delay:2.4s"/>
+<circle cx="301" cy="407" r="2.0" class="rp-estrella" style="animation-delay:1.9s"/>
+<circle cx="457" cy="765" r="1.0" class="rp-estrella" style="animation-delay:0.6s"/>
+<circle cx="714" cy="722" r="1.1" class="rp-estrella" style="animation-delay:0.8s"/>
+<circle cx="584" cy="828" r="1.1" class="rp-estrella" style="animation-delay:3.8s"/>
+<circle cx="694" cy="537" r="1.3" class="rp-estrella" style="animation-delay:0.4s"/>
+<circle cx="45" cy="848" r="1.1" class="rp-estrella" style="animation-delay:2.8s"/>
+<circle cx="213" cy="728" r="1.6" class="rp-estrella" style="animation-delay:1.2s"/>
+<circle cx="150" cy="638" r="0.9" class="rp-estrella" style="animation-delay:0.9s"/>
+<circle cx="446" cy="752" r="1.6" class="rp-estrella" style="animation-delay:1.1s"/>
+<circle cx="721" cy="191" r="0.8" class="rp-estrella" style="animation-delay:1.1s"/>
+<circle cx="358" cy="67" r="1.0" class="rp-estrella" style="animation-delay:1.5s"/>
+<circle cx="456" cy="129" r="1.3" class="rp-estrella" style="animation-delay:3.6s"/>
+<circle cx="770" cy="583" r="1.7" class="rp-estrella" style="animation-delay:2.3s"/>
+<circle cx="123" cy="45" r="0.8" class="rp-estrella" style="animation-delay:3.6s"/>
+<circle cx="555" cy="848" r="0.8" class="rp-estrella" style="animation-delay:2.5s"/>
+<circle cx="386" cy="647" r="1.2" class="rp-estrella" style="animation-delay:4.0s"/>
+<circle cx="73" cy="487" r="1.8" class="rp-estrella" style="animation-delay:3.6s"/>
+<circle cx="583" cy="624" r="1.8" class="rp-estrella" style="animation-delay:3.7s"/>
+<circle cx="286" cy="608" r="2.0" class="rp-estrella" style="animation-delay:3.5s"/>
+<circle cx="336" cy="699" r="1.9" class="rp-estrella" style="animation-delay:2.3s"/>
+<circle cx="496" cy="346" r="1.6" class="rp-estrella" style="animation-delay:2.4s"/></g>
+  <g fill="#3f9a45" opacity="0.55"><path d="M697,900 Q696,743 695,615 Q702,758 704,900 Z"/>
+<path d="M707,900 Q701,808 686,733 Q707,817 714,900 Z"/>
+<path d="M685,900 Q694,795 714,709 Q700,804 692,900 Z"/>
+<path d="M634,900 Q638,761 648,647 Q644,773 641,900 Z"/>
+<path d="M40,900 Q29,804 3,726 Q35,813 47,900 Z"/>
+<path d="M686,900 Q696,763 719,651 Q702,776 693,900 Z"/>
+<path d="M738,900 Q729,739 709,606 Q735,753 745,900 Z"/>
+<path d="M616,900 Q627,813 653,741 Q633,820 623,900 Z"/>
+<path d="M710,900 Q718,792 737,704 Q724,802 717,900 Z"/>
+<path d="M695,900 Q705,776 728,675 Q711,787 702,900 Z"/>
+<path d="M759,900 Q763,736 772,602 Q769,751 766,900 Z"/>
+<path d="M56,900 Q49,763 33,652 Q55,776 63,900 Z"/>
+<path d="M702,900 Q701,822 700,758 Q707,829 709,900 Z"/>
+<path d="M687,900 Q685,755 680,636 Q691,768 694,900 Z"/>
+<path d="M657,900 Q646,748 621,623 Q652,761 664,900 Z"/>
+<path d="M617,900 Q627,779 651,681 Q633,790 624,900 Z"/>
+<path d="M75,900 Q64,803 41,724 Q70,812 82,900 Z"/>
+<path d="M126,900 Q121,738 109,605 Q127,753 133,900 Z"/>
+<path d="M720,900 Q731,803 757,724 Q737,812 727,900 Z"/>
+<path d="M670,900 Q668,748 661,623 Q674,762 677,900 Z"/>
+<path d="M169,900 Q179,773 204,668 Q185,784 176,900 Z"/>
+<path d="M111,900 Q110,741 106,611 Q116,756 118,900 Z"/>
+<path d="M658,900 Q656,833 652,778 Q662,839 665,900 Z"/>
+<path d="M123,900 Q126,828 133,769 Q132,835 130,900 Z"/>
+<path d="M719,900 Q713,774 701,670 Q719,785 726,900 Z"/>
+<path d="M108,900 Q102,739 88,607 Q108,753 115,900 Z"/></g>
+  <g fill="#d9ff5a"><circle cx="90" cy="420" r="3.2" class="rp-luciernaga" style="animation-delay:0.2s"/>
+<circle cx="700" cy="300" r="3.2" class="rp-luciernaga" style="animation-delay:1.9s"/>
+<circle cx="130" cy="700" r="3.2" class="rp-luciernaga" style="animation-delay:3.0s"/>
+<circle cx="720" cy="640" r="3.2" class="rp-luciernaga" style="animation-delay:2.6s"/>
+<circle cx="60" cy="250" r="3.2" class="rp-luciernaga" style="animation-delay:2.2s"/>
+<circle cx="745" cy="470" r="3.2" class="rp-luciernaga" style="animation-delay:1.2s"/></g>
+
+  <!-- ALAS DEL PAPEL (atrás) -->
+  <g>
+    <polygon points="110,395 310,455 205,610" fill="url(#rp-papelAtras)"/>
+    <polygon points="110,395 310,455 205,610" fill="url(#rp-rombos)"/>
+    <polygon points="700,390 510,462 600,610" fill="url(#rp-papelAtras)"/>
+    <polygon points="700,390 510,462 600,610" fill="url(#rp-rombos)"/>
+  </g>
+
+  <!-- TALLOS Y HOJAS -->
+  <g fill="none" stroke="#5a8f3a" stroke-width="9" stroke-linecap="round"><path d="M335,245 Q349,532 372,860" />
+<path d="M545,240 Q457,530 388,860" />
+<path d="M630,370 Q521,595 404,860" />
+<path d="M225,375 Q311,598 420,860" />
+<path d="M290,510 Q364,665 436,860" />
+<path d="M445,365 Q417,592 396,860" />
+<path d="M590,502 Q489,661 412,860" />
+<path d="M400,485 Q390,652 380,860" /></g>
+  <g><path d="M0,0 C 18,-26 58,-26 80,0 C 58,26 18,26 0,0 Z" transform="translate(300,540) rotate(200) scale(1.1)" fill="url(#rp-hoja)"/>
+<path d="M0,0 C 18,-26 58,-26 80,0 C 58,26 18,26 0,0 Z" transform="translate(500,545) rotate(-20) scale(1.1)" fill="url(#rp-hoja)"/>
+<path d="M0,0 C 18,-26 58,-26 80,0 C 58,26 18,26 0,0 Z" transform="translate(215,480) rotate(170) scale(0.9)" fill="url(#rp-hoja)"/>
+<path d="M0,0 C 18,-26 58,-26 80,0 C 58,26 18,26 0,0 Z" transform="translate(600,520) rotate(-10) scale(0.9)" fill="url(#rp-hoja)"/>
+<path d="M0,0 C 18,-26 58,-26 80,0 C 58,26 18,26 0,0 Z" transform="translate(340,560) rotate(120) scale(0.9)" fill="url(#rp-hoja)"/>
+<path d="M0,0 C 18,-26 58,-26 80,0 C 58,26 18,26 0,0 Z" transform="translate(470,565) rotate(60) scale(0.9)" fill="url(#rp-hoja)"/></g>
+
+  <!-- GIRASOLES -->
+  <g class="rp-flores">
+<use href="#rp-girasol" transform="translate(335,205) rotate(10) scale(0.74)"/>
+<use href="#rp-girasol" transform="translate(545,200) rotate(-8) scale(0.8)"/>
+<use href="#rp-girasol" transform="translate(630,330) rotate(20) scale(0.78)"/>
+<use href="#rp-girasol" transform="translate(225,335) rotate(-14) scale(0.86)"/>
+<use href="#rp-girasol" transform="translate(290,470) rotate(30) scale(0.7)"/>
+<use href="#rp-girasol" transform="translate(445,325) rotate(5) scale(0.9)"/>
+<use href="#rp-girasol" transform="translate(590,462) rotate(-20) scale(0.84)"/>
+<use href="#rp-girasol" transform="translate(400,445) rotate(12) scale(0.96)"/>
+  </g>
+
+  <!-- CONO DE PAPEL (adelante, semitransparente) -->
+  <polygon points="200,548 600,548 450,868 350,868" fill="url(#rp-papel)"/>
+  <polygon points="200,548 600,548 450,868 350,868" fill="url(#rp-rombos)" opacity="0.5"/>
+  <polyline points="200,548 350,868 450,868 600,548" fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2"/>
+
+  <!-- CINTA -->
+  <path d="M258,650 L542,650 L530,700 L270,700 Z" fill="url(#rp-cinta)" opacity="0.95"/>
+  <path d="M258,650 L542,650" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
+</svg>
+    </div>
+    <p style="font-size: 1rem; color: #999; font-style: italic;">🌻</p>
+    <p style="margin-top: 20px; font-size: 0.85rem; color: #AAA;">
+        Página creada con sinceridad en el Día de las Flores Amarillas | Para Giuli 💛 | DE: J.A.A.C
+    </p>
+</section>
+
     </div>
 
     <script src="script.js"></script>

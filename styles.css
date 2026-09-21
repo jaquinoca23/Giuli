@@ -13,6 +13,67 @@ body {
     position: relative;
 }
 
+/* Bloquea el scroll mientras se ve la pantalla de entrada */
+body.entrada-activa {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* ================================
+   PANTALLA DE ENTRADA
+   (el toque de la persona inicia la música)
+   ================================ */
+#pantalla-entrada {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0a0e27 0%, #16213e 40%, #0d1b2a 100%);
+    color: #FFD700;
+    transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+
+#pantalla-entrada.oculta {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#pantalla-entrada .entrada-flor {
+    font-size: 5.5rem;
+    animation: flotar 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.8));
+}
+
+#pantalla-entrada h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+#pantalla-entrada .entrada-btn {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+    color: #fff;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 60px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.4);
+    animation: destellar 2s ease-in-out infinite;
+}
+
 /* ================================
    EFECTO DE ESTRELLAS PARPADEANTES
    ================================ */
@@ -549,83 +610,6 @@ h1 {
 }
 
 /* ================================
-   CONTROLES DE MÚSICA
-   ================================ */
-.controles-musica {
-    position: fixed;
-    bottom: 35px;
-    right: 35px;
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    backdrop-filter: blur(20px);
-    padding: 22px 28px;
-    border-radius: 60px;
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5),
-                0 0 30px rgba(255, 215, 0, 0.3);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-}
-
-.boton-musica {
-    background: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2),
-                0 0 10px rgba(255, 255, 255, 0.3);
-    position: relative;
-}
-
-.boton-musica::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.boton-musica:hover {
-    transform: scale(1.15) rotateZ(5deg);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25),
-                0 0 20px rgba(255, 255, 255, 0.4);
-}
-
-.boton-musica.playing {
-    animation: pulsoMusica 1s ease-in-out infinite;
-}
-
-@keyframes pulsoMusica {
-    0%, 100% { 
-        transform: scale(1) rotateZ(0deg);
-    }
-    50% { 
-        transform: scale(1.12) rotateZ(3deg);
-    }
-}
-
-.etiqueta-musica {
-    color: white;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* ================================
    PIE DE PÁGINA
    ================================ */
 footer {
@@ -659,6 +643,50 @@ footer p:last-child {
     color: #AAA;
     font-size: 0.85rem;
     margin-top: 25px;
+}
+
+/* ================================
+   RAMO DE GIRASOLES (sección de cierre)
+   ================================ */
+.ramo-girasoles {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.35),
+                0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+/* El ramo se mece suavemente */
+.ramo-girasoles .rp-flores {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: rpMecer 5s ease-in-out infinite;
+}
+
+@keyframes rpMecer {
+    0%, 100% { transform: rotate(-1.2deg); }
+    50%      { transform: rotate(1.2deg); }
+}
+
+.ramo-girasoles .rp-estrella {
+    animation: rpCentelleo 3.5s ease-in-out infinite;
+    opacity: 0.4;
+}
+
+@keyframes rpCentelleo {
+    0%, 100% { opacity: 0.25; }
+    50%      { opacity: 1; }
+}
+
+.ramo-girasoles .rp-luciernaga {
+    animation: rpLuciernaga 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 6px #d9ff5a);
+}
+
+@keyframes rpLuciernaga {
+    0%, 100% { opacity: 0.2; transform: translateY(0); }
+    50%      { opacity: 1;   transform: translateY(-14px); }
 }
 
 /* ================================
@@ -709,69 +737,12 @@ footer p:last-child {
         padding: 25px;
     }
 
-    .controles-musica {
-        bottom: 20px;
-        right: 20px;
-        padding: 15px 20px;
-    }
-
-    .boton-musica {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-
-    .etiqueta-musica {
-        display: none;
-    }
-
     .mensaje-btn {
         padding: 12px 25px;
         font-size: 0.95rem;
     }
-}
 
-/* ================================
-   CAMPO DE GIRASOLES (sección de cierre)
-   ================================ */
-.campo-girasoles {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    filter: drop-shadow(0 20px 50px rgba(212, 175, 55, 0.35));
-}
-
-.tallo-principal {
-    stroke: url(#gradTallo);
-    stroke-width: 3.5;
-    fill: none;
-}
-
-.petalo-grande {
-    fill: url(#gradPetalo1);
-    filter: url(#sombra);
-}
-
-.centro-flor {
-    fill: url(#gradCentro);
-}
-
-.textura-centro {
-    fill: none;
-    stroke: #6b3f00;
-    stroke-width: 0.6;
-    opacity: 0.35;
-}
-
-.hoja-principal {
-    fill: url(#gradHoja);
-}
-
-.girasol-anim .petalo-grande {
-    animation: brillarPetalo 2.5s ease-in-out infinite;
-}
-
-@keyframes brillarPetalo {
-    0%, 100% { opacity: 0.95; }
-    50% { opacity: 1; }
+    #pantalla-entrada h2 {
+        font-size: 1.5rem;
+    }
 }

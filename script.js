@@ -86,46 +86,63 @@ function crearConfeti(cantidad) {
 }
 
 // ================================
-// CONTROLAR MÚSICA DE FONDO
+// MÚSICA DE FONDO + PANTALLA DE ENTRADA
+// Los navegadores no dejan reproducir sonido sin que la persona toque algo,
+// por eso la música se inicia con el toque en "Toca para abrir".
 // ================================
 const audio = document.getElementById('musica-fondo');
-const botonPlay = document.getElementById('boton-play');
-let musicaActivada = false;
+const pantallaEntrada = document.getElementById('pantalla-entrada');
+const VOLUMEN_FINAL = 0.6; // de 0 (silencio) a 1 (máximo)
 
-function toggleMusica() {
-    if (musicaActivada) {
-        // Pausar música
-        audio.pause();
-        botonPlay.classList.remove('playing');
-        botonPlay.textContent = '🔇';
-        musicaActivada = false;
-    } else {
-        // Reproducir música
-        audio.play().catch(error => {
-            console.log('⚠️ No se pudo reproducir la música.');
-            console.log('Asegúrate de colocar un archivo "musica.mp3" en la misma carpeta que este proyecto.');
-            alert('Por favor, agrega un archivo musica.mp3 a la carpeta del proyecto para escuchar música.');
+function iniciarMusica() {
+    if (!audio) return;
+
+    audio.volume = 0;
+    const intento = audio.play();
+    if (intento && intento.catch) {
+        intento.catch(() => {
+            console.log('⚠️ No se pudo reproducir la música. Verifica que "musica.mp3" esté en la misma carpeta que index.html.');
         });
-        botonPlay.classList.add('playing');
-        botonPlay.textContent = '🎵';
-        musicaActivada = true;
     }
+
+    // Sube el volumen poco a poco
+    let volumen = 0;
+    const subida = setInterval(() => {
+        volumen += 0.02;
+        if (volumen >= VOLUMEN_FINAL) {
+            volumen = VOLUMEN_FINAL;
+            clearInterval(subida);
+        }
+        audio.volume = volumen;
+    }, 100);
+}
+
+function abrirRegalo() {
+    iniciarMusica();
+
+    // Muestra la página
+    pantallaEntrada.classList.add('oculta');
+    document.body.classList.remove('entrada-activa');
+    setTimeout(() => pantallaEntrada.remove(), 1000);
+
+    // Arranca los efectos de la página
+    generarPetalos();
+    agregarBrillo();
 }
 
 // ================================
 // INICIALIZAR LA PÁGINA
 // ================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Generar pétalos al cargar
-    generarPetalos();
+    // La música y los pétalos empiezan cuando se toca la pantalla de entrada
+    if (pantallaEntrada) {
+        pantallaEntrada.addEventListener('click', abrirRegalo, { once: true });
+    } else {
+        generarPetalos();
+    }
     
     // Agregar clase 'loaded' al body para animaciones de carga
     document.body.classList.add('loaded');
-    
-    // Pequeña animación en el primer mensaje especial
-    setTimeout(() => {
-        agregarBrillo();
-    }, 800);
     
     // Mensaje de bienvenida en la consola (bonus 😄)
     console.log('%c✿ Para Giuli - Día de las Flores Amarillas ✿', 
@@ -170,13 +187,6 @@ window.addEventListener('scroll', () => {
 // ================================
 // EVENT LISTENERS ADICIONALES
 // ================================
-
-// Detener la música si el usuario sale de la página
-window.addEventListener('beforeunload', () => {
-    if (musicaActivada) {
-        audio.pause();
-    }
-});
 
 // Agregar interactividad al hacer clic en la flor principal
 const florPrincipal = document.querySelector('.flor-principal');
